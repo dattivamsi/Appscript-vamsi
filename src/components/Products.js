@@ -98,7 +98,7 @@ const Products = () => {
       <ul className={recomendedfilters && "recomend_filter_list"}>
         {recomendedfilters &&
           filter_recomends?.map((ele, ind) => (
-            <li className={filterCheckMark === ind ? "d-flex justify-spacebetween":""} onClick={()=>(setFilterCheckMark(ind))}>
+            <li key={ind} className={filterCheckMark === ind ? "d-flex justify-spacebetween":""} onClick={()=>(setFilterCheckMark(ind))}>
               {filterCheckMark === ind ? (
                 <Image
                   src="/checkbox.png"
